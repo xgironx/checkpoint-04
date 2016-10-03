@@ -1,5 +1,8 @@
 # Checkpoint 04
 
+> If you have not completed the survey yet,
+please do so by the end of the day!
+
 ## Instructions
 
 1. Fork this repo
@@ -82,12 +85,16 @@ Each `Animal` should have:
 - a `greet` instance method
 - Getter and setter for `name`
 
+Create a new `Animal` instance with the name "Pumba"
+
 Make the `Lion` inherit from the `Animal` class.
 The `Lion` class should have a `pack` class variable that holds references to each instance created.
 
 Each lion should have:
 - a `king` attribute which is a boolean
   - If the instance's `name` is `Simba` make the `king` attribute true
+
+Create a new lion instance with the name `simba`
 
 ```ruby
 # code here
@@ -119,29 +126,4 @@ SQL database. If you need an example, you can use: people and wishes
 Your answer:
 ```
 Replace this with your answer
-```
-## Bonus
-
-### Question 7
-
-**Assume:**  
-
-1. Your database two working tables, `genies` and `lamps`.  
-2. You have a working connection to the database for ActiveRecord.  
-3. You have active record models defined for `Genie` and `Lamp`, and the
-relationships between the two are set up in Active Record.  
-4. Lamps have one property, `wishes_remaining`, and genies have one property, `name`.  
-
-**Write code to do the following:**
-
-1. Create a lamp with 3 wishes remaining and a genie named 'Genie'
-2. Create a relationship between 'Genie' and the lamp.
-3. Update the lamp so it only has one wish left.
-  * Oh no... Jafar has Aladdin! Thankfully he's wished to become a genie himself!
-4. Create a new Genie named 'Jafar' and put him in a new lamp with 3 wishes left.
-5. Free the good Genie by setting his lamp to `nil`
-
-Write your code here:
-```ruby
-# code here
 ```
