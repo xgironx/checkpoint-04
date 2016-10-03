@@ -71,9 +71,31 @@ Write your code here:
 ```ruby
 # code here
 ```
-## SQL, Databases, and ActiveRecord (meets Aladdin)
+## Ruby OOP (meets Lion King)
 
 ### Question 4
+
+Create ruby classes for `Animal` and `Lion`.
+Each `Animal` should have:
+
+- a `name` attribute
+- a `greet` instance method
+- Getter and setter for `name`
+
+Make the `Lion` inherit from the `Animal` class.
+The `Lion` class should have a `pack` class variable that holds references to each instance created.
+
+Each lion should have:
+- a `king` attribute which is a boolean
+  - If the instance's `name` is `Simba` make the `king` attribute true
+
+```ruby
+# code here
+```
+
+## SQL, Databases, and ActiveRecord (meets Aladdin)
+
+### Question 5
 
 Describe what an ERD is, and why we create them for applications. Also give an
 example what the attributes and relationships might be for the following
@@ -88,7 +110,7 @@ Your answer:
 Replace this with your answer
 ```
 
-### Question 5
+### Question 6
 
 Describe what a schema is, and how we represent a one-to-many relationship in a
 SQL database. If you need an example, you can use: people and wishes
@@ -98,8 +120,9 @@ Your answer:
 ```
 Replace this with your answer
 ```
+## Bonus
 
-### Question 6
+### Question 7
 
 **Assume:**  
 
