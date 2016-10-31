@@ -127,3 +127,42 @@ Your answer:
 ```
 Replace this with your answer
 ```
+
+### Question 7
+
+Given an active record class `Person`. That inherits from `ActiveRecord::Base` and the following schema :
+```ruby
+class Person < ActiveRecord::Base
+end
+```
+
+```sql
+CREATE TABLE persons(
+  id SERIAL PRIMARY KEY,
+  name VARCHAR NOT NULL,
+  age INT NOT NULL
+)
+```
+
+Write ruby code that will create a person.
+
+Your answer:
+```
+Replace this with your answer
+```
+
+Write ruby code that will query for any person that is 15 years of age
+
+Your answer:
+```
+Replace this with your answer
+```
+
+### Sinatra
+
+Write a route in sinatra that will print "hello world" in the web browser at the following URL: `http://localhost:4567/oh_hello`
+
+Your answer:
+```
+Replace this with your answer
+```
