@@ -11,7 +11,7 @@ please do so by the end of the day!
 4. Add/Commit/Push your changes to Github.
 5. Open a pull request.
 
-You must test your code before filling in an answer. You can do this by creating and running your own `app.rb` file or using an online REPL (e.g., [repl.it](https://repl.it/)).
+For questions 1-4, you must test your code before filling in an answer. You can do this by creating and running your own `app.rb` file or using an online REPL (e.g., [repl.it](https://repl.it/)).
 
 > **Note**: Only place your answer between backticks. Don't modify the backticks,
 or the language specifier after them.
