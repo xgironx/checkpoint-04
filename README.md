@@ -29,7 +29,13 @@ Demonstrate calling the method, passing in "young prince" as the argument.
 Write your code here...
 
 ```ruby
-# code here
+# def offer_rose(person)
+#   puts "Would you take this rose, #{person}, in exchange for giving an old beggar woman shelter from the bitter cold?"
+#   return "#{@person.capitalize}"
+#   # return "#{@person.capitalize}"
+# end
+#
+# offer_rose("young prince, Beauregard")
 ```
 
 ### Question 2
@@ -54,7 +60,9 @@ Using Ruby...
 Write your code here...
 
 ```ruby
-# code here
+# town[:castle][:guests] << town[:residents][1]
+# town[:residents].delete_at(1)
+# town[:castle][:guests]
 ```
 
 ### Question 3
@@ -77,7 +85,9 @@ Belle is friends with Mrs. Potts
 Write your code here...
 
 ```ruby
-# code here
+# friends.each do |friend|
+#   puts "Belle is friends with #{friend}"
+# end
 ```
 
 ## Ruby OOP
