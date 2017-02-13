@@ -128,7 +128,19 @@ entities (no need to draw an ERD)...
 Your answer...
 
 ```
-Replace this with your answer
+- Genie:  
+    magic?, or not magic
+    has_many      lamps
+    belongs_to    dog
+- Lamp:  
+    shiny?, not shiny
+    belongs_to    Genie
+- Person
+    is a Genie?
+- Pet
+    is a dog
+    has_many      Genies
+    belongs_to    lamp
 ```
 
 ### Question 6
@@ -139,7 +151,8 @@ SQL database. If you need an example, you can use `people` and `wishes` models.
 Your answer...
 
 ```
-Replace this with your answer
+both related tables get FK to the other table
+both related models get tagged as "has_many"
 ```
 
 ### Question 7
@@ -164,7 +177,7 @@ Write Ruby code that will create an instance of a person.
 Your answer...
 
 ```ruby
-Replace this with your answer
+Person.new(1, 'bob', 6)
 ```
 
 Write Ruby code that will query for any person that is 15 years of age.
@@ -172,7 +185,7 @@ Write Ruby code that will query for any person that is 15 years of age.
 Your answer...
 
 ```ruby
-Replace this with your answer
+Person.find age > 15
 ```
 
 ### Sinatra
