@@ -110,97 +110,68 @@ Each lion should have...
 Create a new lion instance with the name "Simba".
 
 ```ruby
-I  SPENT WAY TOO MUCH TIME ON THIS TONIGHT,
-BUT IT OFFERED ME A LOT OF EXPLORATION & EXPERIMENTATION,
-SO FEELS LIKE TIME WELL SPENT
-Jay
-              #################################################
-              # 201702130951L   EL LUNES   JAY
-              #################################################
-              # ENTER THESE AT CLI CONSOLE HERE IN REPL
-              # TO TEST THAT OBJECTS EXIST
-#               #
-#    pumba_from_the_Animal_class
-#               # => #<Animal:0x007f00b17e1b80 @name="Pumba">
-#    Animal.all
-#               # => [#<Lion:0x007f00b1de5ef0 @name="Pumba">, #<Lion:0x007f00b1de59f0 @name="Simba">]
-#    Lion.all
-#               # => [#<Lion:0x007f00b1de5ef0 @name="Pumba">, #<Lion:0x007f00b1de59f0 @name="Simba">]
-#
 class Animal
-attr_accessor :name
-@@all = []
-def initialize(name)
-@name = name
-puts ''
-# puts "IN THE CLASS ANIMAL, IM CREATING:   #{self.name}"
-@@all.push(self)
+  attr_accessor :name
+  @@all = []
+  def initialize(name)
+    @name = name
+                                                        puts ''
+    @@all.push(self)
+  end
+  def self.all?          #THIS MAKES IT CLASS-METHOD LAND
+    return @@all
+  end
 end
-def self.all
-return @@all
-end
-end
-puts ''
+                            puts ''
 puts '#############-----------------###############'
 puts 'IN CLASS -- Animal -- IM CREATING MINI-MEs'
 pumba_from_the_Animal_class = Animal.new("Pumba")
 puts 'Animal.new("pumba_from_the_Animal_class")'
-puts "Animal.name:  #{Animal.name}"
-puts "simba.name:  #{pumba_from_the_Animal_class.name}"
-puts ''
+puts "pumba_from_the_Animal_class.name:  #{pumba_from_the_Animal_class.name}"
+                            puts ''
 
 puts '#############-----------------###############'
 puts 'IN CLASS -- Lion --  IM CREATING MINI-MEs'
-puts ''
+                            puts ''
 
 class Lion < Animal
-attr_accessor :name
-@@all = []
-@@pack = []
+  attr_accessor :name
+  @@all = []
+  @@pack = []
 
-def initialize(name)
-@name = name
-puts "IN THE CLASS LION, IM CREATING:  #{self.name}"
-@@all.push(self)
-@@pack.push(self.name)
-end
+  def self.all?             # THIS MAKES IT CLASS-METHOD LAND
+    return @@all
+  end
 
-def check_king(name)
-king = false
-puts ''
-puts "Mighty #{self.name}, Are you a king?"
-                  # if ("Simba")
-                  # if name == "Simba"
-                  # if name == "Simba" == true
-
-if name == "Simba"
-king = true
-puts "YEAH!  I'm a king!  I am #{self.name}, here me ROAR!"
-else
-puts "Damn! No.  I'm not a king!"
-
+  def initialize(name)
+    @name = name
+    puts "IN THE CLASS LION, IM CREATING:  #{self.name}"
+    @@all.push(self)
+    @@pack.push(self.name)
+    if name == "Simba"
+      @king = true          # 'king' is INSTANCE-LEVEL VAR
+      puts "YEAH!  I'm a king!  I am #{self.name}, here me ROAR!"
+    else
+      puts "Damn! No.  I'm not a king!"
+      @king = false
+    end
+  end
 end
-end
-def self.all
-return @@all
-end
-end
-
-# NOW LETS SEE IF ANY OF THIS WORKS:
+                            # NOW LETS SEE IF ANY OF THIS WORKS:
 pumba = Lion.new("Pumba")
 simba = Lion.new("Simba")
 
 pumba.check_king("Pumba")
 simba.check_king("Simba")
 
-puts ''
+                            puts ''
 puts "Lion.all:  #{Lion.all}"
 
-puts ''
+                            puts ''
 puts "Lion.name:  #{Lion.name}"
 puts "simba.name:  #{simba.name}"
 puts "pumba.name:  #{pumba.name}"
-puts ''
+                            puts ''
 ```
 
 ## SQL, Databases, and ActiveRecord
@@ -278,7 +249,7 @@ Write Ruby code that will query for any person that is 15 years of age.
 Your answer...
 
 ```ruby
-Person.where("age = '2'")
+Person.where("age = '15'")
 ```
 
 ### Sinatra
