@@ -29,13 +29,13 @@ Demonstrate calling the method, passing in "young prince" as the argument.
 Write your code here...
 
 ```ruby
-# def offer_rose(person)
-#   puts "Would you take this rose, #{person}, in exchange for giving an old beggar woman shelter from the bitter cold?"
-#   return "#{@person.capitalize}"
-#   # return "#{@person.capitalize}"
-# end
-#
-# offer_rose("young prince, Beauregard")
+def offer_rose(person)
+  puts "Would you take this rose, #{person}, in exchange for giving an old beggar woman shelter from the bitter cold?"
+  return "#{@person.capitalize}"
+  # return "#{@person.capitalize}"
+end
+
+offer_rose("young prince, Beauregard")
 ```
 
 ### Question 2
@@ -60,9 +60,9 @@ Using Ruby...
 Write your code here...
 
 ```ruby
-# town[:castle][:guests] << town[:residents][1]
-# town[:residents].delete_at(1)
-# town[:castle][:guests]
+town[:castle][:guests] << town[:residents][1]
+town[:residents].delete_at(1)
+town[:castle][:guests]
 ```
 
 ### Question 3
@@ -85,9 +85,9 @@ Belle is friends with Mrs. Potts
 Write your code here...
 
 ```ruby
-# friends.each do |friend|
-#   puts "Belle is friends with #{friend}"
-# end
+friends.each do |friend|
+  puts "Belle is friends with #{friend}"
+end
 ```
 
 ## Ruby OOP
@@ -110,10 +110,10 @@ Each lion should have...
 Create a new lion instance with the name "Simba".
 
 ```ruby
-# I  SPENT WAY TOO MUCH TIME ON THIS TONIGHT,
-# BUT IT OFFERED ME A LOT OF EXPLORATION & EXPERIMENTATION,
-# SO FEELS LIKE TIME WELL SPENT
-# Jay
+I  SPENT WAY TOO MUCH TIME ON THIS TONIGHT,
+BUT IT OFFERED ME A LOT OF EXPLORATION & EXPERIMENTATION,
+SO FEELS LIKE TIME WELL SPENT
+Jay
               #################################################
               # 201702130951L   EL LUNES   JAY
               #################################################
@@ -127,80 +127,80 @@ Create a new lion instance with the name "Simba".
 #    Lion.all
 #               # => [#<Lion:0x007f00b1de5ef0 @name="Pumba">, #<Lion:0x007f00b1de59f0 @name="Simba">]
 #
-# class Animal
-# attr_accessor :name
-# @@all = []
-# def initialize(name)
-# @name = name
-# puts ''
-# # puts "IN THE CLASS ANIMAL, IM CREATING:   #{self.name}"
-# @@all.push(self)
-# end
-# def self.all
-# return @@all
-# end
-# end
-# puts ''
-# puts '#############-----------------###############'
-# puts 'IN CLASS -- Animal -- IM CREATING MINI-MEs'
-# pumba_from_the_Animal_class = Animal.new("Pumba")
-# puts 'Animal.new("pumba_from_the_Animal_class")'
-# puts "Animal.name:  #{Animal.name}"
-# puts "simba.name:  #{pumba_from_the_Animal_class.name}"
-# puts ''
-#
-# puts '#############-----------------###############'
-# puts 'IN CLASS -- Lion --  IM CREATING MINI-MEs'
-# puts ''
-#
-# class Lion < Animal
-# attr_accessor :name
-# @@all = []
-# @@pack = []
-#
-# def initialize(name)
-# @name = name
-# puts "IN THE CLASS LION, IM CREATING:  #{self.name}"
-# @@all.push(self)
-# @@pack.push(self.name)
-# end
-#
-# def check_king(name)
-# king = false
-# puts ''
-# puts "Mighty #{self.name}, Are you a king?"
-#                   # if ("Simba")
-#                   # if name == "Simba"
-#                   # if name == "Simba" == true
-#
-# if name == "Simba"
-# king = true
-# puts "YEAH!  I'm a king!  I am #{self.name}, here me ROAR!"
-# else
-# puts "Damn! No.  I'm not a king!"
-#
-# end
-# end
-# def self.all
-# return @@all
-# end
-# end
-#
-# # NOW LETS SEE IF ANY OF THIS WORKS:
-# pumba = Lion.new("Pumba")
-# simba = Lion.new("Simba")
-#
-# pumba.check_king("Pumba")
-# simba.check_king("Simba")
-#
-# puts ''
-# puts "Lion.all:  #{Lion.all}"
-#
-# puts ''
-# puts "Lion.name:  #{Lion.name}"
-# puts "simba.name:  #{simba.name}"
-# puts "pumba.name:  #{pumba.name}"
-# puts ''
+class Animal
+attr_accessor :name
+@@all = []
+def initialize(name)
+@name = name
+puts ''
+# puts "IN THE CLASS ANIMAL, IM CREATING:   #{self.name}"
+@@all.push(self)
+end
+def self.all
+return @@all
+end
+end
+puts ''
+puts '#############-----------------###############'
+puts 'IN CLASS -- Animal -- IM CREATING MINI-MEs'
+pumba_from_the_Animal_class = Animal.new("Pumba")
+puts 'Animal.new("pumba_from_the_Animal_class")'
+puts "Animal.name:  #{Animal.name}"
+puts "simba.name:  #{pumba_from_the_Animal_class.name}"
+puts ''
+
+puts '#############-----------------###############'
+puts 'IN CLASS -- Lion --  IM CREATING MINI-MEs'
+puts ''
+
+class Lion < Animal
+attr_accessor :name
+@@all = []
+@@pack = []
+
+def initialize(name)
+@name = name
+puts "IN THE CLASS LION, IM CREATING:  #{self.name}"
+@@all.push(self)
+@@pack.push(self.name)
+end
+
+def check_king(name)
+king = false
+puts ''
+puts "Mighty #{self.name}, Are you a king?"
+                  # if ("Simba")
+                  # if name == "Simba"
+                  # if name == "Simba" == true
+
+if name == "Simba"
+king = true
+puts "YEAH!  I'm a king!  I am #{self.name}, here me ROAR!"
+else
+puts "Damn! No.  I'm not a king!"
+
+end
+end
+def self.all
+return @@all
+end
+end
+
+# NOW LETS SEE IF ANY OF THIS WORKS:
+pumba = Lion.new("Pumba")
+simba = Lion.new("Simba")
+
+pumba.check_king("Pumba")
+simba.check_king("Simba")
+
+puts ''
+puts "Lion.all:  #{Lion.all}"
+
+puts ''
+puts "Lion.name:  #{Lion.name}"
+puts "simba.name:  #{simba.name}"
+puts "pumba.name:  #{pumba.name}"
+puts ''
 ```
 
 ## SQL, Databases, and ActiveRecord
@@ -270,7 +270,7 @@ Write Ruby code that will create an instance of a person.
 Your answer...
 
 ```ruby
-# Bob = Person.new(1, 'bob', 6)
+Bob = Person.new(1, 'bob', 6)
 ```
 
 Write Ruby code that will query for any person that is 15 years of age.
@@ -278,7 +278,7 @@ Write Ruby code that will query for any person that is 15 years of age.
 Your answer...
 
 ```ruby
-Person.find_by(age:) = 15
+Person.where("age = '2'")
 ```
 
 ### Sinatra
